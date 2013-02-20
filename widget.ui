@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Widget</class>
+ <widget class="QWidget" name="Widget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>675</width>
+    <height>92</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>92</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>QtPropGen</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <property name="leftMargin">
+    <number>5</number>
+   </property>
+   <property name="topMargin">
+    <number>1</number>
+   </property>
+   <property name="rightMargin">
+    <number>5</number>
+   </property>
+   <property name="bottomMargin">
+    <number>1</number>
+   </property>
+   <item>
+    <layout class="QGridLayout" name="gridLayout" columnstretch="1,1,0,0">
+     <property name="topMargin">
+      <number>2</number>
+     </property>
+     <property name="spacing">
+      <number>3</number>
+     </property>
+     <item row="2" column="1">
+      <widget class="QCheckBox" name="cNotify">
+       <property name="text">
+        <string>NOTIFY</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QCheckBox" name="cUser">
+       <property name="text">
+        <string>USER</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Property name:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QCheckBox" name="cReset">
+       <property name="text">
+        <string>RESET</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QCheckBox" name="cConstant">
+       <property name="text">
+        <string>CONSTANT</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QCheckBox" name="cFinal">
+       <property name="text">
+        <string>FINAL</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QCheckBox" name="cWrite">
+         <property name="text">
+          <string>WRITE</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="cChain">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="text">
+          <string>Chain</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="lType">
+       <property name="minimumSize">
+        <size>
+         <width>20</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maxLength">
+        <number>1024</number>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Property type:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QComboBox" name="cEmitType">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLineEdit" name="lName">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>20</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maxLength">
+        <number>1024</number>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="QCheckBox" name="cComment">
+       <property name="text">
+        <string>Comment:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="3">
+      <widget class="QCheckBox" name="cStored">
+       <property name="text">
+        <string>STORED</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="3">
+      <widget class="QCheckBox" name="cScriptable">
+       <property name="text">
+        <string>SCRIPTABLE</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="3">
+      <widget class="QCheckBox" name="cDesignable">
+       <property name="text">
+        <string>DESIGNABLE</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="2">
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QCheckBox" name="cRev">
+         <property name="text">
+          <string>REV</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="sRev">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QPlainTextEdit" name="pComment">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="pDelete">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>50</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>Delete</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+  <zorder>pDelete</zorder>
+  <zorder>lType</zorder>
+  <zorder>lName</zorder>
+  <zorder>label_2</zorder>
+  <zorder>label</zorder>
+  <zorder>cWrite</zorder>
+  <zorder>cChain</zorder>
+  <zorder>sRev</zorder>
+  <zorder>cNotify</zorder>
+  <zorder>cRev</zorder>
+  <zorder>cEmitType</zorder>
+  <zorder>cReset</zorder>
+  <zorder>cScriptable</zorder>
+  <zorder>cDesignable</zorder>
+  <zorder>cUser</zorder>
+  <zorder>cStored</zorder>
+  <zorder>cFinal</zorder>
+  <zorder>cConstant</zorder>
+  <zorder>pComment</zorder>
+  <zorder>cComment</zorder>
+  <zorder>label_2</zorder>
+  <zorder>gridLayoutWidget</zorder>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>lName</tabstop>
+  <tabstop>lType</tabstop>
+  <tabstop>cWrite</tabstop>
+  <tabstop>cChain</tabstop>
+  <tabstop>cReset</tabstop>
+  <tabstop>cNotify</tabstop>
+  <tabstop>cEmitType</tabstop>
+  <tabstop>cConstant</tabstop>
+  <tabstop>cUser</tabstop>
+  <tabstop>cFinal</tabstop>
+  <tabstop>cRev</tabstop>
+  <tabstop>sRev</tabstop>
+  <tabstop>cComment</tabstop>
+  <tabstop>cStored</tabstop>
+  <tabstop>cScriptable</tabstop>
+  <tabstop>cDesignable</tabstop>
+  <tabstop>pComment</tabstop>
+  <tabstop>pDelete</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
