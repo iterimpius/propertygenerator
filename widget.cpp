@@ -141,12 +141,13 @@ void Widget::generateSetterDefinition(QString &code)
 {
     if (write) {
         if (chain) {
-            code.append(prnt->getClassName() + " &" + prnt->getClassName() + "::set" + capName + "(const " + type + " &v) {\n");
+            code.append(prnt->getClassName() + " &" + prnt->getClassName());
         }
         else {
-            code.append( "void " + prnt->getClassName() + "::set" + capName + "(const " + type + " &v) {\n");
-
+            code.append("void " + prnt->getClassName());
         }
+
+        code.append("::set" + capName + "(const " + type + " &v) {\n");
 
         code.append("\tif (m_" + name + " != v) {\n");
         code.append("\t\tm_" + name + " = v;\n");
