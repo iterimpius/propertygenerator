@@ -47,7 +47,7 @@ void Widget::doConnections()
     connect(ui->cDesignable, SIGNAL(clicked()), this, SLOT(designableClicked()));
     connect(ui->cScriptable, SIGNAL(clicked()), this, SLOT(scriptableClicked()));
     connect(ui->cStored, SIGNAL(clicked()), this, SLOT(storedClicked()));
-    connect(ui->cUser, SIGNAL(clicked()), this, SLOT(userCliced()));
+    connect(ui->cUser, SIGNAL(clicked()), this, SLOT(userClicked()));
     connect(ui->cConstant, SIGNAL(clicked()), this, SLOT(constantClicked()));
     connect(ui->cFinal, SIGNAL(clicked()), this, SLOT(finalClicked()));
     connect(ui->cComment, SIGNAL(clicked()), this, SLOT(commentClicked()));
@@ -97,7 +97,7 @@ void Widget::generateComment(QString &code)
 
 void Widget::generatePrivate(QString &code)
 {
-    code.append(type +" m_" + name + ";\n");
+    if (stored) code.append(type +" m_" + name + ";\n");
 }
 
 void Widget::generateNameType(QString &code)
@@ -113,14 +113,16 @@ void Widget::generateGetterDeclaration(QString &code)
 void Widget::generateGetterDefinition(QString &code)
 {
     code.append(type + " " + prnt->getClassName() + "::" + name + "() const {\n");
-    code.append("\treturn m_" + name + ";\n");
+    if (stored) code.append("\treturn m_" + name + ";\n");
+    else code.append("\t//TODO\n");
     code.append("}\n\n");
 }
 
 void Widget::generateGetterInline(QString &code)
 {
     code.append("inline " + type + " " + name + "() const {\n");
-    code.append("\treturn m_" + name + ";\n");
+    if (stored) code.append("\treturn m_" + name + ";\n");
+    else code.append("\t//TODO\n");
     code.append("}\n\n");
 }
 
@@ -265,7 +267,7 @@ void Widget::storedClicked()
     stored = ui->cStored->isChecked();
 }
 
-void Widget::userCliced()
+void Widget::userClicked()
 {
     user = ui->cUser->isChecked();
 }
@@ -273,6 +275,10 @@ void Widget::userCliced()
 void Widget::constantClicked()
 {
     constant = ui->cConstant->isChecked();
+    ui->cWrite->setEnabled(!constant);
+    ui->cWrite->setCheckable(!constant);
+    ui->cNotify->setEnabled(!constant);
+    ui->cNotify->setCheckable(!constant);
 }
 
 void Widget::finalClicked()

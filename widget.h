@@ -48,7 +48,7 @@ private slots:
     void designableClicked();
     void scriptableClicked();
     void storedClicked();
-    void userCliced();
+    void userClicked();
     void constantClicked();
     void finalClicked();
     void commentClicked();
